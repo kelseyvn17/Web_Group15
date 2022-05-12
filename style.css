@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url('https://ik.imagekit.io/7qsdaruk7zf/olga-mikhel-opujNaGQDs4-unsplash_eMY4AfO-a.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1650991800085');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    height: 75px;
+    margin: auto;
+    background-color:white;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #1F299C;
+    font-size: 30px;
+    font-family: Arial;
+    padding-left: 280px;
+    float: center;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+
+.search{
+    width: 330px;
+    float: right;
+    padding-right: 150px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #1F299C;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #1F299C;
+    border: 2px solid #1F299C;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-1{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.form-box{
+    width: 300px;
+	height: 400px;
+	position: relative;
+    top: 120px;
+    left: 120px;
+	background: rgba(0,0,0,0.6);
+}
+
+.main-heading{
+    color: white;
+    padding-bottom: 20px;
+}
+
+.form{
+	position: relative;
+	margin: 0 auto 100px;
+	padding: 45px;
+    text-align: center;
+    background: #0473FF;
+}
+
+.form input{
+	font-family: sans-serif;
+	outline: none;
+    border: none;
+    border-bottom: #fff;
+	width: 100%;
+	margin: 0 0 15px;
+	padding: 15px;
+	font-size: 14px;
+}
+
+.form button{
+	font-family: sans-serif;
+	width: 100%;
+    color: white;
+	font-size: 14px;
+	cursor: pointer;
+	padding: 15px;
+    border: none;
+    background: #1E299C;
+    ;
+}
+
+.form .message{
+    font-size: 12px;
+	margin: 15px 0 0;
+    color: white;
+}
+
+.form .message a{
+	color: #30D1FF;
+	text-decoration: none;
+}
+
+.form .register-form{
+	display: none;
+}
+
+.defination{
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+    padding-left: 200px;
+}
