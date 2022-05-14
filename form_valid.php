@@ -30,14 +30,38 @@ Email: <input type='text' name='email'/></br></br>
             return false;
         }
         }
-        function
+        
+        function verifyPassword() {
+            var pw = document.getElementById("password").value;  
+  //check empty password field  
+            if(pw == "") {
+                document.getElementById("message").innerHTML = "**Fill the password please!";
+                return false;
+            } 
+  //minimum password length validation 
+            if(pw.length < 20 && pw.length > 8) {
+                document.getElementById("message").innerHTML = "**Password length must be atleast 8-20 characters";  
+                return false;
+            }
+        }
+        function matchPassword() {
+            var pw = document.getElementById("password");  
+            var pw1 = document.getElementById("password1"); 
+            if(pw != pw1) {
+                alert("Passwords did not match");  
+            } else {
+                alert("Password created successfully"); 
+            } 
+        }
     </script>
     
     ///store data with name=""///
     <?php
-              if(isset($_POST['fname','lname','email','password','file'])) {
+              $name_error = '';
+              if(isset($_POST['form1'])) {
                   $fname=$_POST['fname'];
                   $lname=$_POST['lname'];
+                  
                   $email=$_POST['email'];
                   $pass=$_POST['password'];
                   $password= password_hash($pass,PASSWORD_DEFAULT);
@@ -45,11 +69,30 @@ Email: <input type='text' name='email'/></br></br>
                   $fp = fopen('accounts.db', 'a');
                   fwrite($fp, $fname,$lname,$email,$password,$img);
                   fclose($fp);
+                  
+                  ///Data validation & Email duplicate check///
+                  if ($username == '') {
+                      echo $name_error = '<span style="color:red">You must enter your name.</span>';
+                      return false;
+                  } else {
+                      $name_error = '';
+                  
                   if ($email == '') {
                       echo $email_error = '<span style="color:red">You must enter your email.</span>';
                       return false;
+                  } elseif ($email == file(accounts.db,,$email) {
+                      echo "Email ID already registered.";
                   } else {
                       $email_error = '';
+                  }
+                  if ($password == '') {
+                      echo $password_error = '<span style="color:red">You must enter password.</span>';
+                      return false;
+                  } else {
+                      $password_error = '';
+                  }
+                  if ($username != '' && $email != '' && $password != '') {
+                      
                   }
               }
     ?>
