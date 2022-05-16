@@ -7,6 +7,7 @@
     
     ///store data with name=""///
     <?php
+	session_start();
               $name_error = '';
               if(isset($_POST['form1'])) {
                   $fname=$_POST['fname'];
