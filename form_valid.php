@@ -1,4 +1,4 @@
-//https://www.simplilearn.com/tutorials/php-tutorial/php-form-validation//
+
 //https://www.codespeedy.com/save-html-form-data-in-a-txt-text-file-in-php///
 
 <!DOCTYPE HTML>  
@@ -12,48 +12,6 @@
 <body>  
     
 /////////////////////Bring this to SignUp/////////////////////
-    ///email validation///
-    <form name="form1" action="#"> 
-Email: <input type='text' name='email'/></br></br>
-<input type="submit" name="submit" value="Submit" onclick="validateEmail(document.form1.email)"/>
-</form>
-
-    <script> 
-        function validateEmail(emailId) {
-            var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-            if(emailId.value.match(mailformat)) {
-                document.form1.text1.focus();
-                return true;
-        } else {
-            alert("Invalid email address.");
-            document.form1.text1.focus();
-            return false;
-        }
-        }
-        
-        function verifyPassword() {
-            var pw = document.getElementById("password").value;  
-  //check empty password field  
-            if(pw == "") {
-                document.getElementById("message").innerHTML = "**Fill the password please!";
-                return false;
-            } 
-  //minimum password length validation 
-            if(pw.length < 20 && pw.length > 8) {
-                document.getElementById("message").innerHTML = "**Password length must be atleast 8-20 characters";  
-                return false;
-            }
-        }
-        function matchPassword() {
-            var pw = document.getElementById("password");  
-            var pw1 = document.getElementById("password1"); 
-            if(pw != pw1) {
-                alert("Passwords did not match");  
-            } else {
-                alert("Password created successfully"); 
-            } 
-        }
-    </script>
     
     ///store data with name=""///
     <?php
@@ -65,7 +23,7 @@ Email: <input type='text' name='email'/></br></br>
                   $email=$_POST['email'];
                   $pass=$_POST['password'];
                   $password= password_hash($pass,PASSWORD_DEFAULT);
-                  $img=$_POST['file'];
+                  $img=$_POST['myfile'];
                   $fp = fopen('accounts.db', 'a');
                   fwrite($fp, $fname,$lname,$email,$password,$img);
                   fclose($fp);
@@ -76,7 +34,7 @@ Email: <input type='text' name='email'/></br></br>
                       return false;
                   } else {
                       $name_error = '';
-                  
+                  }
                   if ($email == '') {
                       echo $email_error = '<span style="color:red">You must enter your email.</span>';
                       return false;
@@ -91,8 +49,18 @@ Email: <input type='text' name='email'/></br></br>
                   } else {
                       $password_error = '';
                   }
-                  if ($username != '' && $email != '' && $password != '') {
-                      
+                  //set allowed types as array
+                  $allowed = array('jpg', 'png', 'jpeg');
+                  //get uploaded file extension
+		          $file = $_FILES['myfile']['name'];
+                  $ext = pathinfo($file, PATHINFO_EXTENSION);
+ //check if extension is allowed
+		          if(in_array($ext, $allowed)){
+			//action if type is allowed
+			      $_SESSION['success'] = 'File type allowed';
+                  } else {
+			//action if type is not allowed
+			      $_SESSION['error'] = 'File type not allowed';
                   }
               }
     ?>
