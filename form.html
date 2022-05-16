@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InstaKilogram</title>
     <link rel="stylesheet" href="signup.css">
+    
+    <script> 
+        function validateForm() {
+            var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if(emailId.value.match(mailformat)) {
+                document.form1.text1.focus();
+                return true;
+        } else {
+            alert("Invalid email address.");
+            document.form1.text1.focus();
+            return false;
+        }
+        
+
+            var pw = document.getElementById("password").value;
+            var pw1 = document.getElementById("password1").value; 
+  //check empty password field  
+            if(pw == "") {
+                document.getElementById("message").innerHTML = "**Fill the password please!";
+                return false;
+            } 
+  //minimum password length validation 
+            if(pw.length < 20 && pw.length > 8) {
+                document.getElementById("message").innerHTML = "**Password length must be atleast 8-20 characters";  
+                return false;
+            }
+
+
+            
+            if(pw != pw1) {
+                alert("Passwords did not match");  
+            } else {
+                alert("Password created successfully"); 
+            } 
+        }
+    </script>
    </head>
 <body>
   <div class="container">
@@ -14,15 +50,15 @@
         <div class="user-info">
           <div class="input-box">
             <span class="details">First Name</span>
-            <input type="text" name="fname" placeholder="Enter your name" required>
+            <input type="text" id="fname" name="fname" placeholder="Enter your name" required>
           </div>
           <div class="input-box">
             <span class="details">Last Name</span>
-            <input type="text" name="lname" placeholder="Enter your name" required>
+            <input type="text" id="lname" name="lname" placeholder="Enter your name" required>
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" name="email" placeholder="Enter your email" required>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
@@ -30,11 +66,11 @@
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="text" name="password" placeholder="Enter your password" required>
+            <input type="text" id="password" name="password" placeholder="Enter your password" required>
           </div>
           <div class="input-box">
             <span class="details">Retype Password</span>
-            <input type="text" name="password1" placeholder="Confirm your password" required>
+            <input type="text" id="password1" name=password1" placeholder="Confirm your password" required>
           </div>
           <div class="input-box">
             <span class="details">Profile picture</span>
@@ -42,7 +78,7 @@
           </div>
         </div>
         <div class="button">
-          <input type="submit" value="Register">
+          <input type="submit" value="Register" onsubmit="return validateForm()">
           <input type="reset" value="Clear">
         </div>
 
