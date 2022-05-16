@@ -135,8 +135,13 @@ form{
 }
 .guest-skip p{
     font-size: 40px;
+    color: #1F299C;
+}
+.guest-skip a{
+    text-decoration: none;
 }
 .guest-skip span{
     width: 100px;
-    font-size: 80px;
+    font-size: 60px;
+    color: #1F299C;
 }
