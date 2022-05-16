@@ -12,28 +12,24 @@
             if(emailId.value.match(mailformat)) {
                 document.form1.text1.focus();
                 return true;
-        } else {
-            alert("Invalid email address.");
-            document.form1.text1.focus();
-            return false;
-        }
-        
-
+            } else {
+              alert("Invalid email address.");
+              document.form1.text1.focus();
+              return false;
+            }
             var pw = document.getElementById("password").value;
             var pw1 = document.getElementById("password1").value; 
   //check empty password field  
             if(pw == "") {
-                document.getElementById("message").innerHTML = "**Fill the password please!";
+                alert("**Fill the password please!");
                 return false;
             } 
   //minimum password length validation 
             if(pw.length < 20 && pw.length > 8) {
-                document.getElementById("message").innerHTML = "**Password length must be atleast 8-20 characters";  
+                alert( "**Password length must be atleast 8-20 characters");  
                 return false;
             }
 
-
-            
             if(pw != pw1) {
                 alert("Passwords did not match");  
             } else {
