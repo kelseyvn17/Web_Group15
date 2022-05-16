@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en" >
   <head>
@@ -42,7 +43,7 @@
   <div class="container">
     <div class="title">Registration</div>
     <div class="content">
-      <form name="form1">
+      <form name="form1" method="POST" action="form_valid.php">
         <div class="user-info">
           <div class="input-box">
             <span class="details">First Name</span>
