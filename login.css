@@ -145,3 +145,83 @@ form{
     font-size: 60px;
     color: #1F299C;
 }
+.footers {
+    background-color: #2d2a30;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footers .footer-left, .footers .footer-center, .footers .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footers .footer-left {
+    width: 40%;
+}
+
+.footers h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+
+.footers h3 span {
+    color: #0473FF;
+}
+
+/* Footer links */
+
+.footers .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footers .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footers .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+/* Footer Right */
+
+.footers .footer-right {
+    width: 40%;
+    float: right;
+}
+
+.footers .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footers .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.footer-links a:hover {
+    color: #3F71EA;
+}
