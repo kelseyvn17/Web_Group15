@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background: #9BC7FF;
+    max-width: 365px;
+    border-radius: 10px;
+    text-align: left;
+    padding: 25px;
+    color: #1F299C;
+}
+.container .hide{
+    opacity: 0;
+    visibility: hidden;
+}
+::selection{
+    color: #fff;
+    background: #9BC7FF;
+  }
+
+.container .message{
+    margin-top: 10px;
+}
+.message p{
+    margin: 10px auto;
+}
+.message .btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.btn button{
+    padding: 10px 20px;
+    background: #0473FF;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+    color: #0473FF;
+}

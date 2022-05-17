@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <title>InstaKilogram | Cookie GDPR</title>
+    <link rel="stylesheet" href="cookie.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cookies</h2>
+        <div class="message">
+            <p>My website uses cookies necessary for its basic functioning. By continuing browsing, you consent to my use of cookies and other technologies.</p>
+            <div class="btn">
+                <button class="item" type="submit">I understand</button>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const cookieMessage = document.querySelector(".container"),
+        acceptBtn = cookieMessage.querySelector("button");
+
+        acceptBtn.onclick = () =>{
+            document.cookie = "CookieBy=InstaKilogram; max-age=" +60*60*24*30;
+            if (document.cookie){
+                cookieMessage.classList.add("hide");
+            }
+            else{
+                alert("Cookie can't be set!")
+            }
+        }
+        let checkCookie = document.cookie.indexOf("CookieBy=InstaKilogram");
+        checkCookie != -1 ? cookieMessage.classList.add("hide"): cookieMessage.classList.remove("hide");
+    </script>
+    
+    
+</body>
+</html>
