@@ -19,17 +19,17 @@ if (isset($_POST['public']) or (isset($_POST['internal']))) {
             if ($fileSize < 1000000) {
                 $fileNameNew = $description.".".$fileActualExt;
                 if (isset($_POST['public'])){
-                    $fileDestination = 'IMG/'.$fileNameNew;
+                    $fileDestination = 'img/'.$fileNameNew;
                     move_uploaded_file($fileTmpName, $fileDestination);
-                    copy('IMG/'.$fileNameNew,'internal/'.$fileNameNew);
-                    copy('IMG/'.$fileNameNew,'private/'.$fileNameNew);
+                    copy('img/'.$fileNameNew,'internal/'.$fileNameNew);
+                    copy('img/'.$fileNameNew,'private/'.$fileNameNew);
                     header("Location: index.php?uploadsuccess");
                 } 
                 if (isset($_POST['internal'])){
                     $fileDestination = 'internal/'.$fileNameNew;
                     move_uploaded_file($fileTmpName, $fileDestination);
                     copy('internal/'.$fileNameNew,'private/'.$fileNameNew);
-                    header("Location: index.php?uploadsuccess");
+                    header("Location: user.php?uploadsuccess");
                 }
                 if (isset($_POST['private'])){
                     $fileDestination = 'private/'.$fileNameNew;
