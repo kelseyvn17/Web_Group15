@@ -41,6 +41,7 @@ img{
     width: 100px;
     height: 35px;
     box-shadow: 0px 4px 4px rgba(25, 51, 90, 0.4);
+    cursor: pointer;
 }
 .btn:hover{
     background-color: #30D1FF;
@@ -81,8 +82,10 @@ img{
     max-width: 700px;
     width: 100%;
     background: #9BC7FF;
+    margin: 30px 10%;
     padding: 25px 30px;
-    border-radius: 5px; 
+    border-radius: 5px;
+     
 }
 .container .title{
     font-size: 30px;
