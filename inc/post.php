@@ -58,16 +58,6 @@ if ($email) {
 	session_start();
               $name_error = '';
               if(isset($_POST['form1'])) {
-                  $fname=$_POST['fname'];
-                  $lname=$_POST['lname'];
-                  
-                  $email=$_POST['email'];
-                  $pass=$_POST['password'];
-                  $password= password_hash($pass,PASSWORD_DEFAULT);
-                  $img=$_POST['myfile'];
-                  $fp = fopen('accounts.db', 'a');
-                  fwrite($fp, $fname,$lname,$email,$password,$img);
-                  fclose($fp);
                   
                   ///Data validation & Email duplicate check///
                   if ($username == '') {
