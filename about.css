@@ -1,0 +1,86 @@
+.aboutus{
+    position: absolute;
+    width: 475px;
+    height: 34px;
+    left: 73px;
+    top: 177px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    color: #000000;
+}
+
+.line{
+    position: absolute;
+    width: 1300px;
+    height: 0px;
+    top: 120px;
+    border: 2px solid #000000;
+}
+
+.title1{
+    position: absolute;
+    width: 280px;
+    height: 42px;
+    left: 73px;
+    top: 330px;
+    
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #000000;
+    
+}
+
+.concept1{
+    position: absolute;
+    width: 1222px;
+    height: 106px;
+    left: 73px;
+    top: 380px;
+    
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    
+    color: #000000;
+}
+
+.title2{
+    position: absolute;
+    width: 280px;
+    height: 42px;
+    left: 73px;
+    top: 450px;
+    
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #000000;
+}
+
+.concept2{
+    position: absolute;
+    width: 1222px;
+    height: 106px;
+    left: 73px;
+    top: 500px;
+    
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    
+    color: #000000;
+}
