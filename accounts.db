@@ -1,10 +1,10 @@
 <?php              
               if(isset($_POST['form1'])) {
-                  $fname=$_POST['fname'];
-                  $lname=$_POST['lname'];
+                  $fname = htmlspecialchars($_POST['fname']);
+                  $lname=htmlspecialchars($_POST['lname']);
                   
-                  $email=$_POST['email'];
-                  $pass=$_POST['password'];
+                  $email=htmlspecialchars($_POST['email']);
+                  $pass=htmlspecialchars($_POST['password']);
                   $password= password_hash($pass,PASSWORD_DEFAULT);
                   $img=$_POST['myfile'];
                   $fp = fopen('accounts.db', 'a');
