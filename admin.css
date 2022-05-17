@@ -5,9 +5,9 @@
 }
 body{
     background-color: #0473FF;
-    height: 100vh;
-    display: flex;
+    background-size: cover;
     align-items: center;
+    display: flex;
     justify-content: center;
 }
 .container{
@@ -15,8 +15,19 @@ body{
     background-color: white;
     color: #1F299C;
     border-radius: 10px;
-    width: 500px;
-    height: 500px;
-    padding: 100px 50px;
-    margin: 50% 20%;
+    margin-top: 100px;
+    width: 450px;
+    height: auto;
+}
+h2{
+    padding: 80px 50px;
+    font-size: 40px;
+}
+
+form{
+    padding: 20px 10px;
+}
+form label{
+    font-size: 18px;
+    margin: 5px 0;
 }
