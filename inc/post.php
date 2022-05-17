@@ -54,11 +54,20 @@ if ($email) {
 /////////////////////Bring this to SignUp/////////////////////
     
     ///store data with name=""///
-    <?php
+<?php
 	session_start();
               $name_error = '';
               if(isset($_POST['form1'])) {
-                  
+                $fname = htmlspecialchars($_POST['fname']);
+                $lname=htmlspecialchars($_POST['lname']);
+                
+                $email=htmlspecialchars($_POST['email']);
+                $pass=htmlspecialchars($_POST['password']);
+                $password= password_hash($pass,PASSWORD_DEFAULT);
+                $img=$_POST['myfile'];
+                $fp = fopen('accounts.db', 'a');
+                fwrite($fp, $fname,$lname,$email,$password,$img);
+                fclose($fp);
                   ///Data validation & Email duplicate check///
                   if ($username == '') {
                       echo $name_error = '<span style="color:red">You must enter your name.</span>';
@@ -99,5 +108,4 @@ if ($email) {
     
     
 /////////////////////////////
-
 
