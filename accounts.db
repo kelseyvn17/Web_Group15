@@ -1,13 +1,1 @@
-<?php              
-              if(isset($_POST['form1'])) {
-                  $fname = htmlspecialchars($_POST['fname']);
-                  $lname=htmlspecialchars($_POST['lname']);
-                  
-                  $email=htmlspecialchars($_POST['email']);
-                  $pass=htmlspecialchars($_POST['password']);
-                  $password= password_hash($pass,PASSWORD_DEFAULT);
-                  $img=$_POST['myfile'];
-                  $fp = fopen('accounts.db', 'a');
-                  fwrite($fp, $fname,$lname,$email,$password,$img);
-                  fclose($fp);
-?>
+
