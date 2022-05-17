@@ -5,7 +5,7 @@ Group 15's member:
 3. Nguyen Phuoc Thanh - s3878144
 
 GitHub URL: https://github.com/kelseyvn17/Web_Group15.git
-Video URL:
+Video URL: https://youtu.be/z2j-Ty3pqME
 
 
 Admin account:
