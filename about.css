@@ -84,3 +84,162 @@
     
     color: #000000;
 }
+
+/* Nav Bar  */
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    background: white;
+    padding: 30px 10%;   
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+img{
+    width: 60px;
+    cursor: pointer;
+}
+.navi{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    align-items: center;
+}
+.button{
+    border: none;
+    border-radius: 10px;
+    background-color: #0473FF;
+    color: white;
+    width: 100px;
+    height: 35px;
+    box-shadow: 0px 4px 4px rgba(25, 51, 90, 0.4);
+}
+.button:hover{
+    background-color: #30D1FF;
+    color: white;
+}
+.search_box{
+    display: flex;
+    margin: auto 0;
+    height: 30px;
+    line-height: 30px;
+}
+.search_box input{
+    border: none;
+    outline: none;
+    background: #E1EAF9;
+    height: 100%;
+    font-size: 16px;
+    width: 300px;
+    padding: 7px 10px;
+    border-radius: 10px 0 0 10px;
+}
+.search_box span{
+    color: white;
+    font-size: 16px;
+    background: #0473FF;
+    height: 100%;
+    padding: 6px 8px 0px 8px;
+    border-radius: 0px 10px 10px 0px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+.search_box span:hover{
+    background-color: #30D1FF;
+    color: white;
+}
+/* End Nav Bar */
+
+footers {
+    position: fixed;
+    bottom:0;
+}
+
+
+.footers {
+    background-color: #2d2a30;
+    box-sizing: border-box;
+    width: 99%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+    position: absolute;
+    bottom: -30px;
+}
+
+.footers .footer-left, .footers .footer-center, .footers .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footers .footer-left {
+    width: 40%;
+}
+
+.footers h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+
+.footers h3 span {
+    color: #0473FF;
+}
+
+/* Footer links */
+
+.footers .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footers .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footers .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+
+/* Footer Right */
+
+.footers .footer-right {
+    width: 40%;
+    float: right;
+}
+
+.footers .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    margin: 0;
+}
+
+.footers .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.footer-links a:hover {
+    color: #3F71EA;
+}
