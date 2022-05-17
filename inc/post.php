@@ -46,18 +46,10 @@ if ($email) {
 
 <?php endif ?>
 
-
-
-//https://www.codespeedy.com/save-html-form-data-in-a-txt-text-file-in-php///
-
-    
-/////////////////////Bring this to SignUp/////////////////////
-    
-    ///store data with name=""///
 <?php
 	session_start();
               $name_error = '';
-              if(isset($_POST['form1'])) {
+              if(isset($_POST['fname']),$_POST['lname'],$_POST['email'],$_POST['password'],$_POST['myfile']) {
                 $fname = htmlspecialchars($_POST['fname']);
                 $lname=htmlspecialchars($_POST['lname']);
                 
@@ -75,13 +67,13 @@ if ($email) {
                   } else {
                       $name_error = '';
                   }
-                  if ($email == '') {
-                      echo $email_error = '<span style="color:red">You must enter your email.</span>';
-                      return false;
-                  } elseif ($email == file(accounts.db,,$email) {
-                      echo "Email ID already registered.";
-                  } else {
-                      $email_error = '';
+                //   if ($email == '') {
+                //       echo $email_error = '<span style="color:red">You must enter your email.</span>';
+                //       return false;
+                //   } elseif ($email == file(accounts.db,,$email) {
+                //       echo "Email ID already registered.";
+                //   } else {
+                //       $email_error = '';
                   }
                   if ($password == '') {
                       echo $password_error = '<span style="color:red">You must enter password.</span>';
@@ -107,5 +99,5 @@ if ($email) {
     
     
     
-/////////////////////////////
+
 
