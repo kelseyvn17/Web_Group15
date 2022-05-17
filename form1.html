@@ -19,7 +19,9 @@
               return false;
             }
             var pw = document.getElementById("password").value;
-            var pw1 = document.getElementById("password1").value; 
+            var pw1 = document.getElementById("password1").value;
+            var fnm = document.getElementByID("fname").value;
+            var lnm = document.getElementByID("lname").value;
   //check empty password field  
             if(pw == "") {
                 alert("**Fill the password please!");
@@ -36,6 +38,15 @@
             } else {
                 alert("Password created successfully"); 
             } 
+   //Name requirement
+            if(fnm.length < 20 && fnm.length > 8) {
+                alert( "**Name length must be atleast 2-20 characters");  
+                return false;
+            }
+            if(lnm.length < 20 && lnm.length > 8) {
+                alert( "**Name length must be atleast 2-20 characters");  
+                return false;
+            }
         }
     </script>
    </head>
@@ -43,7 +54,7 @@
   <div class="container">
     <div class="title">Registration</div>
     <div class="content">
-      <form name="form1" method="POST" action="form_valid.php">
+      <form name="form1" method="POST" action="account.db">
         <div class="user-info">
           <div class="input-box">
             <span class="details">First Name</span>
