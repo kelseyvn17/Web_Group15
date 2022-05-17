@@ -19,26 +19,26 @@
             <input type="search" placeholder="Search...">
             <span class="fa fa-search"></span>
         </div>
-        <a href="login.html"><button class="btn">Sign In</button></a>
+        <a href="index.php"><button class="btn">Sign In</button></a>
     </div>
   </header>
-  <main></main>
+  
   <div class="container">
     <div class="title">Sign Up</div>
     <div class="content">
-      <form action="#" method="get">
+      <form action="index.php" method="get">
         <div class="user-info">
           <div class="input-box">
             <span class="details">First Name</span>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" name="fname" placeholder="Enter your name" required>
           </div>
           <div class="input-box">
             <span class="details">Last Name</span>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" name="lname" placeholder="Enter your name" required>
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
+            <input type="text" name="email" placeholder="Enter your email" required>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
@@ -46,11 +46,11 @@
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="text" placeholder="Enter your password" required>
+            <input type="password" name="password"placeholder="Enter your password" required>
           </div>
           <div class="input-box">
             <span class="details">Retype Password</span>
-            <input type="text" placeholder="Confirm your password" required>
+            <input type="password" name="password1"placeholder="Confirm your password" required>
           </div>
           <div class="input-box">
             <span class="details">Profile picture</span>
