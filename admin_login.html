@@ -6,18 +6,16 @@
     <title>InstaKilogram</title>
     <link rel="stylesheet" href="admin.css">
     <script defer src="admin.js"></script>
-</head>
 <body>
-    <div id="error"></div>
     <div class="container">
-        <h1>Admin Log In</h1>
-        <form id="login" action="cookie.html" nethod="post">
-            <div class="input">
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text" required>
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password" required>
-                <input type="submit" name="button" value="Login" onclick="validate()">
-            </div>
+        <h2>Admin Login</h2>
+        <form id="form_id" method="post" name="myform">
+            <label>User Name </label>
+            <input type="text" name="username" id="username"/>
+            <label>Password </label>
+            <input type="password" name="password" id="password"/>
+            <input type="button" value="Login" id="submit" onclick="validate()"/>
         </form>
     </div>
+</body>
+</html>
